@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/splinter/deep/dogsvscats-0.001-6conv.model"
+all_model_checkpoint_paths: "/home/splinter/deep/dogsvscats-0.001-6conv.model"

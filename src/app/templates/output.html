@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="{{.StaticDir}}style/skeleton.css">
+    <link rel="stylesheet" href="{{.StaticDir}}style/normalize.css">
+    <link rel="stylesheet" href="{{.StaticDir}}style/main.css">
+  </head>
+  <body>
+    <center>
+      <img src="{{.ImagePath}}" id="out"/>
+      <h1>Your image is a {{.Result}}</h1>
+      <button style="color:white;margin-top:20px;" onclick="window.location.replace('/');">CONTINUE</button>
+    </center>
+  </body>
+</html>

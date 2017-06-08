@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="{{.StaticDir}}style/skeleton.css">
+    <link rel="stylesheet" href="{{.StaticDir}}style/normalize.css">
+    <link rel="stylesheet" href="{{.StaticDir}}style/main.css">
+  </head>
+  <body>
+    <center>
+      <img src="{{.StaticDir}}img/cat.png" id="cat"/>
+      <h2 id="or">OR</h2>
+      <img src="{{.StaticDir}}img/dog.png" id="dog"/>
+      <a href="https://github.com/Splinter0/" target="_blank">
+        <h2 id="sub">By Splinter0</h2>
+      </a>
+      <div id="layer2" class="section group">
+      	<div class="col span_1_of_2">
+          <h2 id="up">Upload your image</h2>
+          <form enctype="multipart/form-data" method="post" action="/submit/">
+            <input	type="hidden"	name="token"	value="{{.Token}}"/>
+            <input	type="file"	name="uploadfile"	accept="image/*" required/><br/><br /><br />
+            <input type="submit" value="SUBMIT" name="submit"/>
+          </form>
+      	</div>
+      	<div class="col span_1_of_2">
+          <h2 style="font-size:2em;margin-top:5%">Cat Or Dog?</h2>
+          <p style="line-height:10%;margin-top:2%;">This web app is connected to</p>
+          <p style="line-height:10%;">a convolutional neural network</p>
+          <p style="line-height:10%;">that analise the image you upload</p>
+          <p style="line-height:10%;">and tells you if it's an image</p>
+          <p style="line-height:10%;">of a cat or a dog</p>
+      	</div>
+      </div>
+    </center>
+    <div style="width:100%;height:100px;padding-top:20px;"></div>
+  </body>
+</html>

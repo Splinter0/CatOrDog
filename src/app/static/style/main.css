@@ -1,0 +1,150 @@
+/* Fonts */
+@font-face {
+  font-family: aller;
+  src: url(aller.woff);
+}
+html, body{
+  margin: 0;
+  padding: 0;
+  animation-name: page;
+  -webkit-animation-name: page; /* PAGE TRANSITION */
+  -moz-animation-name: page;
+  animation-duration: 1.0s;
+  -webkit-animation-duration: 1.0s;
+  -moz-animation-duration: 1.0s;
+}
+body{background-color: #424242}
+h2{font-family: aller}
+h1{color: white;font-family: aller}
+
+/* IDs */
+#cat, #dog{
+  width: : 40%;
+  height: auto;
+  padding-top: 5%;
+  animation-name: animal;
+  -webkit-animation-name: animal;
+  -moz-animation-name: animal;
+  animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+}
+#or{
+  left:48%;
+  top: 45%;
+  position:absolute;
+  z-index: 4;
+}
+#sub{
+  font-size: 3em;
+  margin-top: 7%;
+}
+#layer2 {
+  width: 70%;
+  height: 250px;
+  background-color: white;
+  color: black;
+  box-shadow: 10px 10px 5px #263238;
+  border-radius: 15px;
+  text-align: left;
+  margin-top: 7%;
+}
+#layer2 input[type="file"]{
+  margin-left: 15%;
+}
+#up{
+  margin-top: 10%;
+  font-size: 1.5em;
+  margin-left: 15%;
+}
+#layer2 input[type="submit"]{
+  margin-left: 20%;
+}
+#layer2 input[type="submit"]:hover{
+  border: solid black;
+}
+#layer2 p{
+  font-size: 1.2em;
+}
+#out{
+  width: 30%;
+  height: auto;
+  padding-top: 5%;
+}
+/* Animations */
+@keyframes page{
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1.0;
+  }
+}
+@-webkit-keyframes page{
+  from{
+  opacity: 0;
+  }to{
+  opacity: 1.0;
+  }
+}
+@keyframes animal{
+  from{
+    opacity: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }to{
+    opacity: 1.0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@-webkit-keyframes animal{
+  from{
+    opacity: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }to{
+    opacity: 1.0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWO  */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
+}
