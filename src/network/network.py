@@ -81,6 +81,7 @@ if __name__=="__main__":
     network = Network("dogsvscats-{}-{}.model".format(LR, "6conv"), 50, LR)
     network.modelNet() #set the model for the network
     imageList = ["cat.1.jpg"] #list of image to skip
+    print("Neural network started")
     while True:
         #check for images in the path
         for img in os.listdir(imagesPath):

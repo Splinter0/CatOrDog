@@ -1,2 +1,4 @@
+GOPATH=$(pwd)
+export GOPATH
 cd src/network/ && python network.py &
-cd src/app/ && ./app
+cd src/app/ && go build . && ./app
