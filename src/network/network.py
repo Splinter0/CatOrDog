@@ -69,8 +69,11 @@ def dirtyJob(network, img):
     result = network.model.predict([data])[0]
     if np.argmax(result) == 1: str_label = "Dog"
     else : str_label = "Cat"
-    urllib2.urlopen("http://127.0.0.1:8080/result/"+
-                    re.findall(r'[^.;\s]+', img)[0]+"&"+str_label)
+    try :
+        urllib2.urlopen("http://127.0.0.1:8080/result/"+
+                        re.findall(r'[^.;\s]+', img)[0]+"&"+str_label)
+    except :
+        print("Request issue")
 
 if __name__=="__main__":
     LR = 1e-3 #learning rate
